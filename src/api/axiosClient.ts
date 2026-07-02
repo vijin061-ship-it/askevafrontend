@@ -1,10 +1,7 @@
 import axios from "axios";
 import { STORAGE_KEYS } from "@/constants";
 
-// In this project, employeeApi/authApi delegate to a mock service layer
-// (see src/services) instead of hitting this baseURL, so the app runs with
-// zero backend setup. Point VITE_API_BASE_URL at a real API and swap the
-// mock calls in src/api/*.ts for axiosClient calls to go live.
+
 export const axiosClient = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL ?? "/api",
   timeout: 15_000,
